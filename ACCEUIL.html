@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Labyrinthe des Idées</title>
+    <link rel="icon" href="photo/riddles.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Bienvenue sur Le Labyrinthe des Idées</h1>
+        <p>Résolvez, partagez et testez vos capacités !</p>
+        <div class="menu-container">
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#enigmes">Énigmes</a>
+                <a href="#about">À propos de nous</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Section À propos de nous -->
+    <section id="about">
+        <h2>À propos de nous</h2>
+        <p>
+            Le Labyrinthe des Idées est une plateforme interactive dédiée aux passionnés de logique, de réflexion et de défis intellectuels. Nous offrons un espace où chacun peut tester et développer ses compétences en résolvant des énigmes variées, allant des mathématiques à la psychologie, en passant par l'histoire et bien plus encore.
+
+Notre mission est de stimuler la pensée critique et la curiosité à travers une expérience ludique et enrichissante. Que vous soyez un amateur de casse-têtes ou un expert des énigmes, vous trouverez ici des défis à la hauteur de vos compétences. Rejoignez notre communauté, partagez vos propres énigmes et participez à un voyage intellectuel fascinant dans le Labyrinthe des Idées.
+
+        </p>
+    </section>
+
+    <!-- Contenu principal -->
+    <main class="container">
+        <!-- Section Énigmes -->
+        <section id="enigmes">
+            <h2>Choisissez un type d'énigme :</h2>
+            <div class="types-container">
+                <section class="section">
+                    <article>
+                        <h2 class="section-title">Énigmes Mathématique</h2>
+                        <img src="photo/math.jpg" class="section-image" alt="Mathématiques">
+                        <a href="math.html">
+                            <button class="type-button" data-type="math">Découvrir</button>
+                        </a>
+                    </article>
+                </section>
+                <section class="section">
+                    <article>
+                        <h2 class="section-title">Énigmes Générales</h2>
+                        <img src="photo/general.jpg" class="section-image" alt="Générales">
+                        <a href="ENIGMEGENERAL.html">
+                            <button class="type-button" data-type="general">Découvrir</button>
+                        </a>
+                    </article>
+                </section>
+                <section class="section">
+                    <article>
+                        <h2 class="section-title">Énigmes Physiques</h2>
+                        <img src="photo/physics.jpg" class="section-image" alt="Physiques">
+                        <a href="Physiques.html">
+                            <button class="type-button" data-type="physics">Découvrir</button>
+                        </a>
+                    </article>
+                </section>
+                <section class="section">
+                    <article>
+                        <h2 class="section-title">Énigmes Médicales</h2>
+                        <img src="photo/medicale.png" class="section-image" alt="Médicales">
+                        <a href="Médicales.html">
+                            <button class="type-button" data-type="medical">Découvrir</button>
+                        </a>
+                    </article>
+                </section>
+                <!-- Ajout des nouveaux types d'énigmes -->
+                <section class="section">
+                    <article>
+                        <h2 class="section-title">Énigmes de Langue</h2>
+                        <img src="photo/les langues.jpg" class="section-image" alt="Langue">
+                        <a href="language.html">
+                            <button class="type-button" data-type="language">Découvrir</button>
+                        </a>
+                    </article>
+                </section>
+                <section class="section">
+                    <article>
+                        <h2 class="section-title">Énigmes Historiques</h2>
+                        <img src="photo/history.jpg" class="section-image" alt="Historiques">
+                        <a href="history.html">
+                            <button class="type-button" data-type="history">Découvrir</button>
+                        </a>
+                    </article>
+                </section>
+                <section class="section">
+                    <article>
+                        <h2 class="section-title">Énigmes Psychologiques</h2>
+                        <img src="photo/psychology.jpg" class="section-image" alt="Psychologie">
+                        <a href="psychology.html">
+                            <button class="type-button" data-type="psychology">Découvrir</button>
+                        </a>
+                    </article>
+                </section>
+            </div>
+        </section>
+        
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <p>Suivez-nous sur nos réseaux sociaux :</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a> <!-- Ajout de l'icône TikTok -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© Le Labyrinthe des Idées. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
