@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Énigmes Physiques</title>
+    <link rel="icon" href="photo/les langues.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Bienvenue sur Le Labyrinthe des Idées</h1>
+        <p>Résolvez, partagez et testez vos capacités !</p>
+        <div class="menu-container">
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="ACCEUIL.html">Acceuil</a>
+                <a href="ACCEUIL.html">À propos de nous</a>
+                <a href="ACCEUIL.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section des énigmes -->
+    <section id="enigmes">
+        <div id="score-container">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+        <div id="timer-container">
+            <p>Temps restant : <span id="timer">00:00</span></p>
+        </div>
+        <div id="questions-container">
+            <div class="enigme" id="enigme1">
+                <h3>Je suis parlée par plus de 300 millions de personnes et utilise des lettres cursives. Quelle est ma langue ?</h3>
+                <form id="enigme1Form">
+                    <label>
+                        <input type="radio" name="enigme1" value="Arabe"> a) Arabe
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="Anglais"> b) Anglais
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="Français"> c) Français
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="Hébreu"> d) Hébreu
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(1)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme2">
+                <h3>Je suis la langue de Shakespeare et l’une des plus parlées dans le monde. Qui suis-je ?</h3>
+                <form id="enigme2Form">
+                    <label>
+                        <input type="radio" name="enigme2" value="Anglais"> a) Anglais
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="Français"> b) Français
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="Russe"> c) Russe
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="Japonais"> d) Japonais
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(2)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme3">
+                <h3>Je suis une langue romane avec des accents variés et je suis la langue officielle de la France. Qui suis-je ?</h3>
+                <form id="enigme3Form">
+                    <label>
+                        <input type="radio" name="enigme3" value="Français"> a) Français
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="Italien"> b) Italien
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="Espagnol"> c) Espagnol
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="Portugais"> d) Portugais
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(3)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme4">
+                <h3>On m’écrit de droite à gauche, mais je ne suis pas l’arabe. Qui suis-je ?</h3>
+                <form id="enigme4Form">
+                    <label>
+                        <input type="radio" name="enigme4" value="Hébreu"> a) Hébreu
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="Arabe"> b) Arabe
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="Persan"> c) Persan
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="Ourdou"> d) Ourdou
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(4)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme5">
+                <h3>Je suis la langue ayant le plus grand nombre de locuteurs natifs dans le monde. Qui suis-je ?</h3>
+                <form id="enigme5Form">
+                    <label>
+                        <input type="radio" name="enigme5" value="Mandarin (chinois)"> a) Mandarin (chinois)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="Espagnol"> b) Espagnol
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="Anglais"> c) Anglais
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="Arabe"> d) Arabe
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(5)">Suivant</button>
+                </form>
+            </div>
+            <div class="enigme" id="enigme6">
+                <h3>Je suis une langue qui utilise l’alphabet cyrillique. Qui suis-je ?</h3>
+                <form id="enigme6Form">
+                    <label>
+                        <input type="radio" name="enigme6" value="Russe"> a) Russe
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="Ukrainien"> b) Ukrainien
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="Bulgare"> c) Bulgare
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="Serbe"> d) Serbe
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(6)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme7">
+                <h3>Je suis parlée principalement au Japon et utilise les systèmes d’écriture hiragana, katakana et kanji. Quelle est ma langue ?</h3>
+                <form id="enigme7Form">
+                    <label>
+                        <input type="radio" name="enigme7" value="Japonais"> a) Japonais
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="Coréen"> b) Coréen
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="Chinois"> c) Chinois
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="Vietnamien"> d) Vietnamien
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(7)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme8">
+                <h3>Je suis une langue indo-européenne utilisée dans les écritures anciennes du sous-continent indien. Qui suis-je ?</h3>
+                <form id="enigme8Form">
+                    <label>
+                        <input type="radio" name="enigme8" value="Sanskrit"> a) Sanskrit
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="Hindi"> b) Hindi
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="Tamoul"> c) Tamoul
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="Bengali"> d) Bengali
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(8)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme9">
+                <h3>On me parle au Brésil, mais je ne suis pas l’espagnol. Quelle est ma langue ?</h3>
+                <form id="enigme9Form">
+                    <label>
+                        <input type="radio" name="enigme9" value="Portugais"> a) Portugais
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Espagnol"> b) Espagnol
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Français"> c) Français
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Italien"> d) Italien
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(9)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme10">
+                <h3>Je suis une langue germanique, très proche de l’anglais et parlée aux Pays-Bas. Qui suis-je ?</h3>
+                <form id="enigme10Form">
+                    <label>
+                        <input type="radio" name="enigme10" value="Néerlandais"> a) Néerlandais
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="Allemand"> b) Allemand
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="Danois"> c) Danois
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="Suédois"> d) Suédois
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(10)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme11">
+                <h3>Je suis une langue sémitique parlée principalement en Éthiopie et j’utilise un alphabet unique. Qui suis-je ?</h3>
+                <form id="enigme11Form">
+                    <label>
+                        <input type="radio" name="enigme11" value="Amharique"> a) Amharique
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Arabe"> b) Arabe
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Hébreu"> c) Hébreu
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Tigrigna"> d) Tigrigna
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(11)">Suivant</button>
+                </form>
+            </div>
+            <div class="enigme" id="enigme12">
+                <h3>Je suis la langue officielle de la Corée du Sud et je m’écris avec l’alphabet Hangul. Qui suis-je ?</h3>
+                <form id="enigme12Form">
+                    <label>
+                        <input type="radio" name="enigme12" value="Coréen"> a) Coréen
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="Japonais"> b) Japonais
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="Chinois"> c) Chinois
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="Vietnamien"> d) Vietnamien
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(12)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme13">
+                <h3>Je suis une langue romane proche du français et parlée principalement en Italie. Qui suis-je ?</h3>
+                <form id="enigme13Form">
+                    <label>
+                        <input type="radio" name="enigme13" value="Italien"> a) Italien
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="Espagnol"> b) Espagnol
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="Portugais"> c) Portugais
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="Français"> d) Français
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(13)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme14">
+                <h3>Je suis une langue scandinave, proche du norvégien et du suédois, et parlée au Danemark. Qui suis-je ?</h3>
+                <form id="enigme14Form">
+                    <label>
+                        <input type="radio" name="enigme14" value="Danois"> a) Danois
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="Suédois"> b) Suédois
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="Norvégien"> c) Norvégien
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="Finnois"> d) Finnois
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(14)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme15">
+                <h3>Je suis une langue tonale et je m’écris avec des caractères issus du sino-tibétain. Qui suis-je ?</h3>
+                <form id="enigme15Form">
+                    <label>
+                        <input type="radio" name="enigme15" value="Thaï"> a) Thaï
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Vietnamien"> b) Vietnamien
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Chinois"> c) Chinois
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Cambodgien"> d) Cambodgien
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(15)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme16">
+                <h3>Je suis une langue celte, parlée en Irlande et aussi appelée gaélique. Qui suis-je ?</h3>
+                <form id="enigme16Form">
+                    <label>
+                        <input type="radio" name="enigme16" value="Irlandais"> a) Irlandais
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Écossais"> b) Écossais
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Breton"> c) Breton
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Galicien"> d) Galicien
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(16)">Suivant</button>
+                </form>
+            </div>
+            <div class="enigme" id="enigme17">
+                <h3>Je suis une question, mais je n’ai pas de réponse. Qui suis-je ?</h3>
+                <form id="enigme17Form">
+                    <label>
+                        <input type="radio" name="enigme17" value="Une énigme"> a) Une énigme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="Un problème"> b) Un problème
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="Un défi"> c) Un défi
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="Un mystère"> d) Un mystère
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(17)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme18">
+                <h3>Qu'est-ce qui monte mais ne redescend jamais ?</h3>
+                <form id="enigme18Form">
+                    <label>
+                        <input type="radio" name="enigme18" value="L'âge"> a) L'âge
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="Le temps"> b) Le temps
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="La chaleur"> c) La chaleur
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="La flamme"> d) La flamme
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(18)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme19">
+                <h3>Je suis une responsabilité, mais je ne peux pas être vue. Qui suis-je ?</h3>
+                <form id="enigme19Form">
+                    <label>
+                        <input type="radio" name="enigme19" value="Une responsabilité"> a) Une responsabilité
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Un devoir"> b) Un devoir
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Une contrainte"> c) Une contrainte
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Un fardeau"> d) Un fardeau
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(19)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme20">
+                <h3>Je suis un outil utilisé pour couper, mais je ne suis pas un couteau. Qui suis-je ?</h3>
+                <form id="enigme20Form">
+                    <label>
+                        <input type="radio" name="enigme20" value="Une scie"> a) Une scie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="Un couteau"> b) Un couteau
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="Une hache"> c) Une hache
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="Un marteau"> d) Un marteau
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(20)">Suivant</button>
+                </form>
+            </div>
+           </div>
+        </section>
+            <footer>
+                <p>© 2024 Le Labyrinthe des Idées. Tous droits réservés.</p>
+            </footer>
+        
+            <script>
+                let score = 0;  // Variable pour suivre le score
+                
+               const bonnesReponses = {
+    'enigme1': 'Arabe',                // Je suis parlée par plus de 300 millions de personnes et utilise des lettres cursives. Quelle est ma langue ?
+    'enigme2': 'Anglais',              // Je suis la langue de Shakespeare et l’une des plus parlées dans le monde. Qui suis-je ?
+    'enigme3': 'Français',             // Je suis une langue romane avec des accents variés et je suis la langue officielle de la France. Qui suis-je ?
+    'enigme4': 'Hébreu',               // On m’écrit de droite à gauche, mais je ne suis pas l’arabe. Qui suis-je ?
+    'enigme5': 'Mandarin (chinois)',   // Je suis la langue ayant le plus grand nombre de locuteurs natifs dans le monde. Qui suis-je ?
+    'enigme6': 'Russe',                // Je suis une langue qui utilise l’alphabet cyrillique. Qui suis-je ?
+    'enigme7': 'Japonais',             // Je suis parlée principalement au Japon et utilise les systèmes d’écriture hiragana, katakana et kanji. Quelle est ma langue ?
+    'enigme8': 'Sanskrit',             // Je suis une langue indo-européenne utilisée dans les écritures anciennes du sous-continent indien. Qui suis-je ?
+    'enigme9': 'Portugais',            // On me parle au Brésil, mais je ne suis pas l’espagnol. Quelle est ma langue ?
+    'enigme10': 'Néerlandais',         // Je suis une langue germanique, très proche de l’anglais et parlée aux Pays-Bas. Qui suis-je ?
+    'enigme11': 'Amharique',           // Je suis une langue sémitique parlée principalement en Éthiopie et j’utilise un alphabet unique. Qui suis-je ?
+    'enigme12': 'Coréen',              // Je suis la langue officielle de la Corée du Sud et je m’écris avec l’alphabet Hangul. Qui suis-je ?
+    'enigme13': 'Italien',             // Je suis une langue romane proche du français et parlée principalement en Italie. Qui suis-je ?
+    'enigme14': 'Danois',              // Je suis une langue scandinave, proche du norvégien et du suédois, et parlée au Danemark. Qui suis-je ?
+    'enigme15': 'Thaï',                // Je suis une langue tonale et je m’écris avec des caractères issus du sino-tibétain. Qui suis-je ?
+    'enigme16': 'Irlandais',           // Je suis une langue celte, parlée en Irlande et aussi appelée gaélique. Qui suis-je ?
+    'enigme17': 'Français',            // Je suis une langue officielle au Canada et je suis la première langue de nombreux Québécois. Quelle est ma langue ?
+    'enigme18': 'Turc',                // Je suis parlée en Turquie et j’utilise un alphabet latin modifié. Qui suis-je ?
+    'enigme19': 'Sanskrit',            // Je suis la langue utilisée dans les textes religieux hindous et suis la base de nombreuses langues modernes de l’Inde. Qui suis-je ?
+    'enigme20': 'Swahili'              // Je suis une langue bantoue, parlée en Afrique de l’Est et écrite avec l’alphabet latin. Qui suis-je ?
+};
+        
+function verifierReponse(enigmeId) {
+    const selectedAnswer = document.querySelector(`input[name="enigme${enigmeId}"]:checked`);
+    if (!selectedAnswer) {
+        alert("Vous n'avez pas sélectionner une réponse.");
+        return;
+    }
+
+    const reponseUtilisateur = selectedAnswer.value;
+    const bonneReponse = bonnesReponses[`enigme${enigmeId}`];
+
+    if (reponseUtilisateur === bonneReponse) {
+        score++;
+    } else {
+        alert("Mauvaise réponse.");
+    }
+
+    document.getElementById('score').textContent = `Score: ${score}`;
+}
+
+function nextQuestion(enigmeId) {
+    verifierReponse(enigmeId);
+
+    // Hide current question
+    const currentEnigme = document.getElementById(`enigme${enigmeId}`);
+    currentEnigme.style.display = 'none';
+
+    // Show next question
+    const nextEnigme = document.getElementById(`enigme${enigmeId + 1}`);
+    if (nextEnigme) {
+        nextEnigme.style.display = 'block';
+    }
+}
+
+let timeLeft = 1800; // Timer in seconds (30 minutes)
+let timerInterval;
+
+function startTimer() {
+    timerInterval = setInterval(function() {
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            alert('Le temps est écoulé!');
+            document.getElementById('score').textContent = `Votre score final est : ${score}`;
+            document.getElementById('questions-container').style.display = 'none';
+        } else {
+            timeLeft--;
+            updateTimerDisplay(timeLeft);
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    document.getElementById('timer').textContent = `${padTime(minutes)}:${padTime(remainingSeconds)}`;
+}
+
+function padTime(time) {
+    return time < 10 ? `0${time}` : time;
+}
+
+window.onload = function() {
+    startTimer(); // Start the timer when the page loads
+
+    // Initialize score display
+    document.getElementById('score').textContent = `Score: ${score}`;
+
+    // Show the first question
+    document.getElementById('enigme1').style.display = 'block';
+};
+</script>
+          <script src="script.js"></script>
+    </body>
+    </html>

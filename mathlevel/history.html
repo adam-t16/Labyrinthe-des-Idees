@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Énigmes Historiques</title>
+    <link rel="icon" href="photo/history.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Bienvenue sur Le Labyrinthe des Idées</h1>
+        <p>Résolvez, partagez et testez vos capacités !</p>
+        <div class="menu-container">
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="ACCEUIL.html">Acceuil</a>
+                <a href="ACCEUIL.html">À propos de nous</a>
+                <a href="ACCEUIL.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section des énigmes -->
+    <section id="enigmes">
+        <div id="score-container">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+        <div id="timer-container">
+            <p>Temps restant : <span id="timer">00:00</span></p>
+        </div>
+        <div id="questions-container">
+            <div class="enigme" id="enigme1">
+                <h3>Je suis l’invention qui a révolutionné la communication au 15e siècle, permettant l’impression de livres en masse. Qui suis-je ?</h3>
+                <form id="enigme1Form">
+                    <label>
+                        <input type="radio" name="enigme1" value="L’imprimerie"> a) L’imprimerie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="La machine à écrire"> b) La machine à écrire
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="Le papier"> c) Le papier
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="La presse"> d) La presse
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(1)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme2">
+                <h3>Je suis une période marquée par des découvertes scientifiques et des inventions industrielles, ayant commencé au 18e siècle. Que suis-je ?</h3>
+                <form id="enigme2Form">
+                    <label>
+                        <input type="radio" name="enigme2" value="La révolution industrielle"> a) La révolution industrielle
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="La Renaissance"> b) La Renaissance
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="Le siècle des Lumières"> c) Le siècle des Lumières
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="L’âge moderne"> d) L’âge moderne
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(2)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme3">
+                <h3>Je suis la première forme d'écriture utilisée par l'humanité, gravée sur des tablettes d'argile. Quelle est mon nom ?</h3>
+                <form id="enigme3Form">
+                    <label>
+                        <input type="radio" name="enigme3" value="L’écriture cunéiforme"> a) L’écriture cunéiforme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="Les hiéroglyphes"> b) Les hiéroglyphes
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="Le grec ancien"> c) Le grec ancien
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="L’alphabet phénicien"> d) L’alphabet phénicien
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(3)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme4">
+                <h3>Je suis la période où les glaciers ont recouvert une grande partie de la Terre, modifiant son paysage. Que suis-je ?</h3>
+                <form id="enigme4Form">
+                    <label>
+                        <input type="radio" name="enigme4" value="L’ère glaciaire"> a) L’ère glaciaire
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="L’ère tertiaire"> b) L’ère tertiaire
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="L’ère secondaire"> c) L’ère secondaire
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="L’âge de pierre"> d) L’âge de pierre
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(4)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme5">
+                <h3>Je suis l'événement qui a marqué la fin de la Seconde Guerre mondiale en 1945. Quel est cet événement ?</h3>
+                <form id="enigme5Form">
+                    <label>
+                        <input type="radio" name="enigme5" value="La capitulation de l’Allemagne et du Japon"> a) La capitulation de l’Allemagne et du Japon
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="La création de l’ONU"> b) La création de l’ONU
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="Le bombardement de Hiroshima"> c) Le bombardement de Hiroshima
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="Le débarquement de Normandie"> d) Le débarquement de Normandie
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(5)">Suivant</button>
+                </form>
+            </div>
+            <div class="enigme" id="enigme6">
+                <h3>Je suis l'invention qui a permis aux humains de voler dans les airs pour la première fois en 1903. Qui suis-je ?</h3>
+                <form id="enigme6Form">
+                    <label>
+                        <input type="radio" name="enigme6" value="L’avion"> a) L’avion
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="Le ballon dirigeable"> b) Le ballon dirigeable
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="Le planeur"> c) Le planeur
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="Le parachute"> d) Le parachute
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(6)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme7">
+                <h3>Je suis une période où les humains ont commencé à cultiver la terre et à domestiquer les animaux. Que suis-je ?</h3>
+                <form id="enigme7Form">
+                    <label>
+                        <input type="radio" name="enigme7" value="La révolution néolithique"> a) La révolution néolithique
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="L’âge de pierre"> b) L’âge de pierre
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="L’ère glaciaire"> c) L’ère glaciaire
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="La révolution industrielle"> d) La révolution industrielle
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(7)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme8">
+                <h3>Je suis le satellite artificiel envoyé dans l’espace en 1957 par l’Union soviétique. Quel est mon nom ?</h3>
+                <form id="enigme8Form">
+                    <label>
+                        <input type="radio" name="enigme8" value="Spoutnik"> a) Spoutnik
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="Apollo"> b) Apollo
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="Hubble"> c) Hubble
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="Luna"> d) Luna
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(8)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme9">
+                <h3>Je suis une catastrophe naturelle universelle, impliquant la terre qui tremble. Que suis-je ?</h3>
+                <form id="enigme9Form">
+                    <label>
+                        <input type="radio" name="enigme9" value="Un tremblement de terre"> a) Un tremblement de terre
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Un tsunami"> b) Un tsunami
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Un cyclone"> c) Un cyclone
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Une éruption volcanique"> d) Une éruption volcanique
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(9)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme10">
+                <h3>Je suis le moyen utilisé pendant des millénaires pour allumer des feux avant l'invention des allumettes. Que suis-je ?</h3>
+                <form id="enigme10Form">
+                    <label>
+                        <input type="radio" name="enigme10" value="Le silex ou les pierres à feu"> a) Le silex ou les pierres à feu
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="Une torche"> b) Une torche
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="Un briquet"> c) Un briquet
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="Des plantes séchées"> d) Des plantes séchées
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(10)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme11">
+                <h3>Je suis un conflit où des hommes se battaient avec des armes en pierre et en bois. Que suis-je ?</h3>
+                <form id="enigme11Form">
+                    <label>
+                        <input type="radio" name="enigme11" value="Une guerre préhistorique"> a) Une guerre préhistorique
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Une guerre tribale"> b) Une guerre tribale
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Une chasse"> c) Une chasse
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Une bataille médiévale"> d) Une bataille médiévale
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(11)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme12">
+                <h3>Je suis l’objet utilisé depuis l’Antiquité pour mesurer le temps en observant les ombres. Que suis-je ?</h3>
+                <form id="enigme12Form">
+                    <label>
+                        <input type="radio" name="enigme12" value="Le cadran solaire"> a) Le cadran solaire
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="Une horloge à eau"> b) Une horloge à eau
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="Une montre à gousset"> c) Une montre à gousset
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="Un sablier"> d) Un sablier
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(12)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme13">
+                <h3>Je suis l'aliment de base consommé par presque toutes les civilisations humaines. Que suis-je ?</h3>
+                <form id="enigme13Form">
+                    <label>
+                        <input type="radio" name="enigme13" value="Le pain"> a) Le pain
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="Le riz"> b) Le riz
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="Les pâtes"> c) Les pâtes
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="Le maïs"> d) Le maïs
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(13)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme14">
+                <h3>Je suis l'animal domestiqué qui a aidé les humains à labourer les champs dans presque toutes les cultures. Qui suis-je ?</h3>
+                <form id="enigme14Form">
+                    <label>
+                        <input type="radio" name="enigme14" value="Le bœuf"> a) Le bœuf
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="Le cheval"> b) Le cheval
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="L’âne"> c) L’âne
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="Le mouton"> d) Le mouton
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(14)">Suivant</button>
+                </form>
+            </div>
+            <div class="enigme" id="enigme15">
+                <h3>Je suis un lieu où des peuples du monde entier se réunissent pour échanger des produits et des idées. Que suis-je ?</h3>
+                <form id="enigme15Form">
+                    <label>
+                        <input type="radio" name="enigme15" value="Un marché"> a) Un marché
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Un port"> b) Un port
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Un bazar"> c) Un bazar
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Une foire"> d) Une foire
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(15)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme16">
+                <h3>Je suis la méthode ancienne utilisée pour transporter des messages rapidement à travers les empires. Que suis-je ?</h3>
+                <form id="enigme16Form">
+                    <label>
+                        <input type="radio" name="enigme16" value="Les messagers à cheval"> a) Les messagers à cheval
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Les pigeons voyageurs"> b) Les pigeons voyageurs
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Les navires"> c) Les navires
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Les caravanes"> d) Les caravanes
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(16)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme17">
+                <h3>Je suis le phénomène universel qui provoque une pénurie de nourriture, affectant des sociétés entières. Que suis-je ?</h3>
+                <form id="enigme17Form">
+                    <label>
+                        <input type="radio" name="enigme17" value="La famine"> a) La famine
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="La guerre"> b) La guerre
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="La sécheresse"> c) La sécheresse
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="Les épidémies"> d) Les épidémies
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(17)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme18">
+                <h3>Je suis une structure construite par l’homme pour traverser les rivières et connecter des terres. Que suis-je ?</h3>
+                <form id="enigme18Form">
+                    <label>
+                        <input type="radio" name="enigme18" value="Un pont"> a) Un pont
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="Un barrage"> b) Un barrage
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="Un viaduc"> c) Un viaduc
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="Une passerelle"> d) Une passerelle
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(18)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme19">
+                <h3>Je suis l'acte de célébrer les récoltes et l’abondance dans presque toutes les cultures. Que suis-je ?</h3>
+                <form id="enigme19Form">
+                    <label>
+                        <input type="radio" name="enigme19" value="Une fête des moissons"> a) Une fête des moissons
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Une cérémonie religieuse"> b) Une cérémonie religieuse
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Un banquet royal"> c) Un banquet royal
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Un festival folklorique"> d) Un festival folklorique
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(19)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme20">
+                <h3>Je suis le matériau utilisé dans toutes les cultures pour construire des abris, bien avant le béton. Que suis-je ?</h3>
+                <form id="enigme20Form">
+                    <label>
+                        <input type="radio" name="enigme20" value="Le bois"> a) Le bois
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="La pierre"> b) La pierre
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="La terre"> c) La terre
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="Les feuilles"> d) Les feuilles
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(20)">Terminer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Le Labyrinthe des Idées. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        let score = 0;  // Variable pour suivre le score
+        
+        const bonnesReponses = {
+    'enigme1': 'L’imprimerie', // Je suis l’invention qui a révolutionné la communication au 15e siècle, permettant l’impression de livres en masse. Qui suis-je ? Réponse : L’imprimerie
+    'enigme2': 'La révolution industrielle', // Je suis une période marquée par des découvertes scientifiques et des inventions industrielles, ayant commencé au 18e siècle. Que suis-je ? Réponse : La révolution industrielle
+    'enigme3': 'L’écriture cunéiforme', // Je suis la première forme d'écriture utilisée par l'humanité, gravée sur des tablettes d'argile. Quelle est mon nom ? Réponse : L’écriture cunéiforme
+    'enigme4': 'L’ère glaciaire', // Je suis la période où les glaciers ont recouvert une grande partie de la Terre, modifiant son paysage. Que suis-je ? Réponse : L’ère glaciaire
+    'enigme5': 'La capitulation de l’Allemagne et du Japon', // Je suis l'événement qui a marqué la fin de la Seconde Guerre mondiale en 1945. Quel est cet événement ? Réponse : La capitulation de l’Allemagne et du Japon
+    'enigme6': 'L’avion', // Je suis l'invention qui a permis aux humains de voler dans les airs pour la première fois en 1903. Qui suis-je ? Réponse : L’avion
+    'enigme7': 'La révolution néolithique', // Je suis une période où les humains ont commencé à cultiver la terre et à domestiquer les animaux. Que suis-je ? Réponse : La révolution néolithique
+    'enigme8': 'Spoutnik', // Je suis le satellite artificiel envoyé dans l’espace en 1957 par l’Union soviétique. Quel est mon nom ? Réponse : Spoutnik
+    'enigme9': 'Un tremblement de terre', // Je suis une catastrophe naturelle universelle, impliquant la terre qui tremble. Que suis-je ? Réponse : Un tremblement de terre
+    'enigme10': 'Le silex ou les pierres à feu', // Je suis le moyen utilisé pendant des millénaires pour allumer des feux avant l'invention des allumettes. Que suis-je ? Réponse : Le silex ou les pierres à feu
+    'enigme11': 'Une guerre préhistorique', // Je suis un conflit où des hommes se battaient avec des armes en pierre et en bois. Que suis-je ? Réponse : Une guerre préhistorique
+    'enigme12': 'Le cadran solaire', // Je suis l’objet utilisé depuis l’Antiquité pour mesurer le temps en observant les ombres. Que suis-je ? Réponse : Le cadran solaire
+    'enigme13': 'Le pain', // Je suis l'aliment de base consommé par presque toutes les civilisations humaines. Que suis-je ? Réponse : Le pain
+    'enigme14': 'Le bœuf', // Je suis l'animal domestiqué qui a aidé les humains à labourer les champs dans presque toutes les cultures. Qui suis-je ? Réponse : Le bœuf
+    'enigme15': 'Un marché', // Je suis un lieu où des peuples du monde entier se réunissent pour échanger des produits et des idées. Que suis-je ? Réponse : Un marché
+    'enigme16': 'Les messagers à cheval', // Je suis la méthode ancienne utilisée pour transporter des messages rapidement à travers les empires. Que suis-je ? Réponse : Les messagers à cheval
+    'enigme17': 'La famine', // Je suis le phénomène universel qui provoque une pénurie de nourriture, affectant des sociétés entières. Que suis-je ? Réponse : La famine
+    'enigme18': 'Un pont', // Je suis une structure construite par l’homme pour traverser les rivières et connecter des terres. Que suis-je ? Réponse : Un pont
+    'enigme19': 'Une fête des moissons', // Je suis l'acte de célébrer les récoltes et l’abondance dans presque toutes les cultures. Que suis-je ? Réponse : Une fête des moissons
+    'enigme20': 'Le bois', // Je suis le matériau utilisé dans toutes les cultures pour construire des abris, bien avant le béton. Que suis-je ? Réponse : Le bois
+};
+
+function verifierReponse(enigmeId) {
+    const selectedAnswer = document.querySelector(`input[name="enigme${enigmeId}"]:checked`);
+    if (!selectedAnswer) {
+        alert("Vous n'avez pas sélectionner une réponse.");
+        return;
+    }
+
+    const reponseUtilisateur = selectedAnswer.value;
+    const bonneReponse = bonnesReponses[`enigme${enigmeId}`];
+
+    if (reponseUtilisateur === bonneReponse) {
+        score++;
+    } else {
+        alert("Mauvaise réponse.");
+    }
+
+    document.getElementById('score').textContent = `Score: ${score}`;
+}
+
+function nextQuestion(enigmeId) {
+    verifierReponse(enigmeId);
+
+    // Hide current question
+    const currentEnigme = document.getElementById(`enigme${enigmeId}`);
+    currentEnigme.style.display = 'none';
+
+    // Show next question
+    const nextEnigme = document.getElementById(`enigme${enigmeId + 1}`);
+    if (nextEnigme) {
+        nextEnigme.style.display = 'block';
+    }
+}
+
+let timeLeft = 1800; // Timer in seconds (30 minutes)
+let timerInterval;
+
+function startTimer() {
+    timerInterval = setInterval(function() {
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            alert('Le temps est écoulé!');
+            document.getElementById('score').textContent = `Votre score final est : ${score}`;
+            document.getElementById('questions-container').style.display = 'none';
+        } else {
+            timeLeft--;
+            updateTimerDisplay(timeLeft);
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    document.getElementById('timer').textContent = `${padTime(minutes)}:${padTime(remainingSeconds)}`;
+}
+
+function padTime(time) {
+    return time < 10 ? `0${time}` : time;
+}
+
+window.onload = function() {
+    startTimer(); // Start the timer when the page loads
+
+    // Initialize score display
+    document.getElementById('score').textContent = `Score: ${score}`;
+
+    // Show the first question
+    document.getElementById('enigme1').style.display = 'block';
+};
+</script>
+          <script src="script.js"></script>
+    </body>
+    </html>

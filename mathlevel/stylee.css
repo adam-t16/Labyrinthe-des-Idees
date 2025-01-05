@@ -1,0 +1,364 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    color: #f4f4f4;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    background: #1e3c72;
+    padding: 2rem 0;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+        font-family: 'Georgia', serif; /* Une police élégante */
+        font-size: 2rem; /* Taille du texte */
+        font-weight: bold; /* Texte en gras */
+        color: #ffce00; /* Couleur vive qui attire l’attention */
+        text-align: center; /* Centre le titre */
+        text-transform: uppercase; /* Met tout en majuscule */
+        letter-spacing: 3px; /* Espacement entre les lettres */
+        margin: 20px 0; /* Espace autour du titre */
+        padding: 10px 20px; /* Espace intérieur pour un meilleur focus */
+        background: linear-gradient(90deg, #274988, #4e4cd3); /* Dégradé de fond */
+        border-radius: 15px; /* Coins arrondis */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+        display: inline-block; /* Ajuste la largeur au texte */
+    }
+    #score-container, #timer-container {
+        font-family: 'Georgia', serif; /* Une police élégante */
+        font-size: 2rem; /* Taille du texte */
+        font-weight: bold; /* Texte en gras */
+        color: #ffce00; /* Couleur vive qui attire l’attention */
+        text-align: center; /* Centre le texte */
+        text-transform: uppercase; /* Met tout en majuscule */
+        letter-spacing: 3px; /* Espacement entre les lettres */
+        margin: 20px 0; /* Espace autour */
+        padding: 10px 20px; /* Espace intérieur */
+        background: linear-gradient(90deg, #274988, #4e4cd3); /* Dégradé de fond */
+        border-radius: 15px; /* Coins arrondis */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+        display: inline-block; /* Ajuste la largeur au texte */
+        width: auto;
+    }
+    
+    #score-container {
+        margin-right: 20px; /* Espace entre le score et le timer */
+    }
+    
+    #timer-container {
+        margin-left: 20px; /* Espace entre le score et le timer */
+    }
+    
+    /* Pour aligner le score et le timer sur la même ligne */
+    #score-container, #timer-container {
+        display: inline-block;
+        vertical-align: middle; /* Aligne verticalement les éléments */
+    }
+    
+    #timer {
+        font-size: 1.8rem; /* Ajuste la taille du timer */
+    }
+    
+    #score {
+        font-size: 1.8rem; /* Ajuste la taille du score */
+    }
+header p {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+}
+
+.menu-container {
+    margin-top: 1rem;
+}
+
+.hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffce00;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+/* Section: About */
+#about {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 2rem 0;
+    border-radius: 10px;
+}
+
+#about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ffce00;
+}
+
+#about p {
+    font-size: 1rem;
+    color: #f4f4f4;
+}
+
+/* Main content */
+.container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Section: Enigmes */
+#enigmes h2 {
+    color: #ffce00;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.types-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #ffce00;
+}
+
+.section-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.type-button {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.8rem 1.5rem;
+    background: #ffce00;
+    color: #1e3c72;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.type-button:hover {
+    background: #d4aa00;
+}
+
+/* Section: Contact */
+#contact {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    color: #ffce00;
+    font-size: 2rem;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #1e3c72;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-menu a {
+        font-size: 1rem;
+    }
+
+    .section-image {
+        height: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    #about h2 {
+        font-size: 1.5rem;
+    }
+
+    #about p {
+        font-size: 0.9rem;
+    }
+
+    .type-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+.types-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+@media (max-width: 600px) {
+    .types-container {
+        grid-template-columns: 1fr; /* Une seule colonne pour tout */
+    }
+}
+/* Style pour les choix multiples */
+.enigme-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.enigme {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.enigme:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.enigme h3 {
+    font-size: 1.3rem;
+    color: #ffce00;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    color: #f4f4f4;
+    margin-bottom: 0.5rem;
+}
+
+button {
+    background: #ffce00;
+    color: #1e3c72;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background: #d4aa00;
+}
+
+.reponse {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.reponse.correct {
+    color: green;
+}
+
+.reponse.incorrect {
+    color: red;
+}
+
+.reponse.warning {
+    color: orange;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .enigme-container {
+        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+    }
+}

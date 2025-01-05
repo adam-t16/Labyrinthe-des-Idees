@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Énigmes Médicales</title>
+    <link rel="icon" href="photo/medicale.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Bienvenue sur Le Labyrinthe des Idées</h1>
+        <p>Résolvez, partagez et testez vos capacités !</p>
+        <div class="menu-container">
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="ACCEUIL.html">Acceuil</a>
+                <a href="ACCEUIL.html">À propos de nous</a>
+                <a href="ACCEUIL.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section des énigmes -->
+    <section id="enigmes">
+        <div id="score-container">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+        <div id="timer-container">
+            <p>Temps restant : <span id="timer">00:00</span></p>
+        </div>
+        <div id="questions-container">
+            <div class="enigme" id="enigme1">
+                <h3>Énigme 1 : Je suis une structure en forme de X ou de bâtonnet, visible dans le noyau. Je porte le code de la vie et je me duplique avant que la cellule ne se divise. Qui suis-je ?</h3>
+                <form id="enigme1Form">
+                    <label>
+                        <input type="radio" name="enigme1" value="Chromosome"> a) Chromosome
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="ADN"> b) ADN
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="Mitochondrie"> c) Mitochondrie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="Cytoplasme"> d) Cytoplasme
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(1)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme2">
+                <h3>Énigme 2 : Chez l'humain, je suis présent en 23 paires. Quelle est ma somme totale dans une cellule somatique ?</h3>
+                <form id="enigme2Form">
+                    <label>
+                        <input type="radio" name="enigme2" value="46 chromosomes"> a) 46 chromosomes
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="23 chromosomes"> b) 23 chromosomes
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="92 chromosomes"> c) 92 chromosomes
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="50 chromosomes"> d) 50 chromosomes
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(2)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme3">
+                <h3>Énigme 3 : Je suis l'état d'un chromosome après la réplication de l'ADN, mais avant la division cellulaire. Que suis-je ?</h3>
+                <form id="enigme3Form">
+                    <label>
+                        <input type="radio" name="enigme3" value="Chromosome double"> a) Centromère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="Chromatide sœur"> b) Chromatide sœur
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="Chromatine"> c) Chromatine
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="Noyau"> d) Noyau
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(3)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme4">
+                <h3>Énigme 4 : Parmi mes 23 paires humaines, une paire détermine le sexe biologique. Comment m'appelle-t-on ?</h3>
+                <form id="enigme4Form">
+                    <label>
+                        <input type="radio" name="enigme4" value="Chromosomes GONOSAUMAUX"> a) Chromosomes gonosomaux
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="Chromosomes autosomes"> b) Chromosomes autosomes
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="Chromosomes somatiques"> c) Chromosomes somatiques
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="Chromosomes réplicants"> d) Chromosomes réplicants
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(4)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme5">
+                <h3>Énigme 5 : Je transporte les gènes de génération en génération. Que suis-je ?</h3>
+                <form id="enigme5Form">
+                    <label>
+                        <input type="radio" name="enigme5" value="Chromosome"> a) Chromosome
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="Gène"> b) Gène
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="ARN"> c) ARN
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="ADN"> d) ADN
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(5)">Suivant</button>
+                </form>
+            </div>
+            <div class="enigme" id="enigme6">
+                <h3>Énigme 6 : Je suis la partie plus courte ou plus longue d'un chromosome. Comment s'appellent ces deux bras ?</h3>
+                <form id="enigme6Form">
+                    <label>
+                        <input type="radio" name="enigme6" value="Bras court (p) et bras long (q)"> a) Bras court (p) et bras long (q)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="Bras supérieur et bras inférieur"> b) Bras supérieur et bras inférieur
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="Bras gauche et bras droit"> c) Bras gauche et bras droit
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="Bras central et bras périphérique"> d) Bras central et bras périphérique
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(6)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme7">
+                <h3>Énigme 7 : Je suis la région du chromosome où l'ARN ribosomal est synthétisé. Qui suis-je ?</h3>
+                <form id="enigme7Form">
+                    <label>
+                        <input type="radio" name="enigme7" value="Organisateur nucléolaire (NOR)"> a) Organisateur nucléolaire (NOR)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="Centromère"> b) Centromère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="Telomère"> c) Telomère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="Chromatine"> d) Chromatine
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(7)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme8">
+                <h3>Énigme 8 : Chez l'humain, ma trisomie cause une maladie génétique connue. De quel chromosome s'agit-il ?</h3>
+                <form id="enigme8Form">
+                    <label>
+                        <input type="radio" name="enigme8" value="Chromosome 21"> a) Chromosome 21
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="Chromosome 13"> b) Chromosome 13
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="Chromosome 18"> c) Chromosome 18
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="Chromosome 23"> d) Chromosome 23
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(8)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme9">
+                <h3>Énigme 9 : Je suis le processus où les chromosomes homologues échangent des segments d'ADN pendant la méiose. Qui suis-je ?</h3>
+                <form id="enigme9Form">
+                    <label>
+                        <input type="radio" name="enigme9" value="Enjambement"> a) Enjambement (crossing-over)
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Mitose"> b) Mitose
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Recombinaison génétique"> c) Recombinaison génétique
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Duplication"> d) Duplication
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(9)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme10">
+                <h3>Énigme 10 : Je suis le plus petit chromosome humain, mais j'ai un rôle crucial. Qui suis-je ?</h3>
+                <form id="enigme10Form">
+                    <label>
+                        <input type="radio" name="enigme10" value="Chromosome Y"> a) Chromosome Y
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="Chromosome X"> b) Chromosome X
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="Chromosome 1"> c) Chromosome 1
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="Chromosome 21"> d) Chromosome 21
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(10)">Suivant</button>
+                </form>
+            </div>
+            <div class="enigme" id="enigme11">
+                <h3>Énigme 11 : Je suis le phénomène où il manque un chromosome dans une cellule. Comment s'appelle cette anomalie ?</h3>
+                <form id="enigme11Form">
+                    <label>
+                        <input type="radio" name="enigme11" value="Monosomie"> a) Monosomie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Trisomie"> b) Trisomie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Polyploidie"> c) Polyploidie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Aneuploïdie"> d) Aneuploïdie
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(11)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme12">
+                <h3>Énigme 12 : Je suis une cellule avec trois copies d'un même chromosome. Comment appelle-t-on cette anomalie ?</h3>
+                <form id="enigme12Form">
+                    <label>
+                        <input type="radio" name="enigme12" value="Trisomie"> a) Trisomie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="Monosomie"> b) Monosomie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="Tétraploïdie"> c) Tétraploïdie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="Euploïdie"> d) Euploïdie
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(12)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme13">
+                <h3>Énigme 13 : Je suis la région terminale d'un chromosome qui protège son ADN de la dégradation. Que suis-je ?</h3>
+                <form id="enigme13Form">
+                    <label>
+                        <input type="radio" name="enigme13" value="Télomère"> a) Télomère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="Centromère"> b) Centromère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="Chromatine"> c) Chromatine
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="Nucléosome"> d) Nucléosome
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(13)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme14">
+                <h3>Énigme 14 : Je suis la région du chromosome où les microtubules s'attachent pendant la mitose. Qui suis-je ?</h3>
+                <form id="enigme14Form">
+                    <label>
+                        <input type="radio" name="enigme14" value="Centromère"> a) Centromère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="Télomère"> b) Télomère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="Chromatide"> c) Chromatide
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="Nucléole"> d) Nucléole
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(14)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme15">
+                <h3>Énigme 15 : Je suis le lien qui unit deux chromatides sœurs avant leur séparation. Que suis-je ?</h3>
+                <form id="enigme15Form">
+                    <label>
+                        <input type="radio" name="enigme15" value="Cohésine"> a) Cohésine
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Centromère"> b) Centromère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Télomère"> c) Télomère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Kinétochore"> d) Kinétochore
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(15)">Suivant</button>
+                </form>
+            </div>
+            <div class="enigme" id="enigme16">
+                <h3>Énigme 16 : Je suis un schéma qui montre l'emplacement des gènes sur un chromosome. Que suis-je ?</h3>
+                <form id="enigme16Form">
+                    <label>
+                        <input type="radio" name="enigme16" value="Carte chromosomique"> a) Carte chromosomique ou carte génétique
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Génome"> b) Génome
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Caryotype"> c) Caryotype
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Chromatine"> d) Chromatine
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(16)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme17">
+                <h3>Énigme 17 : Je suis le phénomène où une cellule reçoit un chromosome supplémentaire entier. Comment s'appelle ce déséquilibre chromosomique ?</h3>
+                <form id="enigme17Form">
+                    <label>
+                        <input type="radio" name="enigme17" value="Aneuploidie"> a) Aneuploidie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="Polyploidie"> b) Polyploidie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="Trisomie"> c) Trisomie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="Monosomie"> d) Monosomie
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(17)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme18">
+                <h3>Énigme 18 : Un individu avec un seul chromosome X (au lieu de XX ou XY) est atteint d'une maladie. Quelle est cette pathologie ?</h3>
+                <form id="enigme18Form">
+                    <label>
+                        <input type="radio" name="enigme18" value="Syndrome de Turner"> a) Syndrome de Turner
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="Syndrome de Klinefelter"> b) Syndrome de Klinefelter
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="Syndrome de Down"> c) Syndrome de Down
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="Syndrome de Patau"> d) Syndrome de Patau
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(18)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme19">
+                <h3>Énigme 19 : Je suis une anomalie où deux chromosomes échangent des segments, mais de manière déséquilibrée. Comment s'appelle ce phénomène ?</h3>
+                <form id="enigme19Form">
+                    <label>
+                        <input type="radio" name="enigme19" value="Translocation déséquilibrée"> a) Translocation déséquilibrée
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Délétion"> b) Délétion
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Duplication"> c) Duplication
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Inversion"> d) Inversion
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(19)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme20">
+                <h3>Énigme 20 : Je suis un type de chromosome rare, formé lorsque mes extrémités se rejoignent. Que suis-je ?</h3>
+                <form id="enigme20Form">
+                    <label>
+                        <input type="radio" name="enigme20" value="Chromosome en anneau"> a) Chromosome en anneau
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="Chromosome en X"> b) Chromosome en X
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="Chromosome Y"> c) Chromosome Y
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="Chromosome en U"> d) Chromosome en U
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(20)">Suivant</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Le Labyrinthe des Idées. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        let score = 0;  // Variable pour suivre le score
+        
+        const bonnesReponses = {
+    'enigme1': 'Chromosome',                     // Je suis une structure en forme de X ou de bâtonnet, visible dans le noyau. Je porte le code de la vie et je me duplique avant que la cellule ne se divise. Qui suis-je ?
+    'enigme2': '46 chromosomes',                 // Chez l'humain, je suis présent en 23 paires. Quelle est ma somme totale dans une cellule somatique ?
+    'enigme3': 'Chromatide sœur', // Je suis l'état d'un chromosome après la réplication de l'ADN, mais avant la division cellulaire. Que suis-je ?
+    'enigme4': 'Chromosomes GONOSAUMAUX',            // Parmi mes 23 paires humaines, une paire détermine le sexe biologique. Comment m'appelle-t-on ?
+    'enigme5': 'Chromosome',                     // Je transporte les gènes de génération en génération. Que suis-je ?
+    'enigme6': 'Bras court (p) et bras long (q)', // Je suis la partie plus courte ou plus longue d'un chromosome. Comment s'appellent ces deux bras ?
+    'enigme7': 'Organisateur nucléolaire (NOR)',  // Je suis la région du chromosome où l'ARN ribosomal est synthétisé. Qui suis-je ?
+    'enigme8': 'Chromosome 21', // Chez l'humain, ma trisomie cause une maladie génétique connue. De quel chromosome s'agit-il ?
+    'enigme9': 'Enjambement',     // Je suis le processus où les chromosomes homologues échangent des segments d'ADN pendant la méiose. Qui suis-je ?
+    'enigme10': 'Chromosome Y',                  // Je suis le plus petit chromosome humain, mais j'ai un rôle crucial. Qui suis-je ?
+    'enigme11': 'Monosomie',                     // Je suis le phénomène où il manque un chromosome dans une cellule. Comment s'appelle cette anomalie ?
+    'enigme12': 'Trisomie',                      // Je suis une cellule avec trois copies d'un même chromosome. Comment appelle-t-on cette anomalie ?
+    'enigme13': 'Télomère',                      // Je suis la région terminale d'un chromosome qui protège son ADN de la dégradation. Que suis-je ?
+    'enigme14': 'Centromère',                    // Je suis la région du chromosome où les microtubules s'attachent pendant la mitose. Qui suis-je ?
+    'enigme15': 'Cohésine',                      // Je suis le lien qui unit deux chromatides sœurs avant leur séparation. Que suis-je ?
+    'enigme16': 'Carte chromosomique', // Je suis un schéma qui montre l'emplacement des gènes sur un chromosome. Que suis-je ?
+    'enigme17': 'Aneuploidie',                   // Je suis le phénomène où une cellule reçoit un chromosome supplémentaire entier. Comment s'appelle ce déséquilibre chromosomique ?
+    'enigme18': 'Syndrome de Turner',            // Un individu avec un seul chromosome X (au lieu de XX ou XY) est atteint d'une maladie. Quelle est cette pathologie ?
+    'enigme19': 'Translocation déséquilibrée',   // Je suis une anomalie où deux chromosomes échangent des segments, mais de manière déséquilibrée. Comment s'appelle ce phénomène ?
+    'enigme20': 'Chromosome en anneau'           // Je suis un type de chromosome rare, formé lorsque mes extrémités se rejoignent. Que suis-je ?
+};
+
+function verifierReponse(enigmeId) {
+    const selectedAnswer = document.querySelector(`input[name="enigme${enigmeId}"]:checked`);
+    if (!selectedAnswer) {
+        alert("Vous n'avez pas sélectionner une réponse.");
+        return;
+    }
+
+    const reponseUtilisateur = selectedAnswer.value;
+    const bonneReponse = bonnesReponses[`enigme${enigmeId}`];
+
+    if (reponseUtilisateur === bonneReponse) {
+        score++;
+    } else {
+        alert("Mauvaise réponse.");
+    }
+
+    document.getElementById('score').textContent = `Score: ${score}`;
+}
+
+function nextQuestion(enigmeId) {
+    verifierReponse(enigmeId);
+
+    // Hide current question
+    const currentEnigme = document.getElementById(`enigme${enigmeId}`);
+    currentEnigme.style.display = 'none';
+
+    // Show next question
+    const nextEnigme = document.getElementById(`enigme${enigmeId + 1}`);
+    if (nextEnigme) {
+        nextEnigme.style.display = 'block';
+    }
+}
+
+let timeLeft = 1800; // Timer in seconds (30 minutes)
+let timerInterval;
+
+function startTimer() {
+    timerInterval = setInterval(function() {
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            alert('Le temps est écoulé!');
+            document.getElementById('score').textContent = `Votre score final est : ${score}`;
+            document.getElementById('questions-container').style.display = 'none';
+        } else {
+            timeLeft--;
+            updateTimerDisplay(timeLeft);
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    document.getElementById('timer').textContent = `${padTime(minutes)}:${padTime(remainingSeconds)}`;
+}
+
+function padTime(time) {
+    return time < 10 ? `0${time}` : time;
+}
+
+window.onload = function() {
+    startTimer(); // Start the timer when the page loads
+
+    // Initialize score display
+    document.getElementById('score').textContent = `Score: ${score}`;
+
+    // Show the first question
+    document.getElementById('enigme1').style.display = 'block';
+};
+</script>
+          <script src="script.js"></script>
+    </body>
+    </html>

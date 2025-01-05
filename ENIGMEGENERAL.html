@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Énigmes Générales</title>
+    <link rel="icon" href="photo/general.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Bienvenue sur Le Labyrinthe des Idées</h1>
+        <p>Résolvez, partagez et testez vos capacités !</p>
+        <div class="menu-container">
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="ACCEUIL.html">Acceuil</a>
+                <a href="ACCEUIL.html">À propos de nous</a>
+                <a href="ACCEUIL.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section des énigmes -->
+    <section id="enigmes">
+        <div id="score-container">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+        <div id="timer-container">
+            <p>Temps restant : <span id="timer">00:00</span></p>
+        </div>
+        <div id="questions-container">
+            <div class="enigme" id="enigme1">
+                <h3>Énigme 1 : Plus je suis grand, moins on me voit. Qui suis-je ?</h3>
+                <form id="enigme1Form">
+                    <label>
+                        <input type="radio" name="enigme1" value="Un géant"> a) Un géant
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="L'obscurité."> b) L'obscurité.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="Un nuage."> c) Un nuage.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="Un arbre."> d) Un arbre.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(1)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme2">
+                <h3>Énigme 2 : Je suis pris avant de vous coucher, mais je ne vous réveille jamais. Qui suis-je ?</h3>
+                <form id="enigme2Form">
+                    <label>
+                        <input type="radio" name="enigme2" value="Un café"> a) Un café
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="Un rêve."> b) Un rêve.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="Un coussin."> c) Un coussin.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="Un livre."> d) Un livre.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(2)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme3">
+                <h3>Énigme 3 : Qu'est-ce qui est plus léger qu'une plume, mais même le plus fort des hommes ne peut le tenir longtemps ?</h3>
+                <form id="enigme3Form">
+                    <label>
+                        <input type="radio" name="enigme3" value="Un éléphant"> a) Un éléphant
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="Le souffle."> b) Le souffle.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="Une balle de tennis."> c) Une balle de tennis.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="Un nuage."> d) Un nuage.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(3)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme4">
+                <h3>Énigme 4 : Quel est le mot de quatre lettres qui peut être aussi bien un plaisir qu’une contrainte ?</h3>
+                <form id="enigme4Form">
+                    <label>
+                        <input type="radio" name="enigme4" value="Livre"> a) Livre
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="Temps."> b) Temps.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="Travail."> c) Travail.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="Jeu."> d) Jeu.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(4)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme5">
+                <h3>Énigme 5 : Je suis partout, mais je ne suis jamais vu. Je peux vous guider, mais vous ne pouvez pas me toucher. Qui suis-je ?</h3>
+                <form id="enigme5Form">
+                    <label>
+                        <input type="radio" name="enigme5" value="Un fantôme."> a) Un fantôme.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="L'air."> b) L'air.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="L'électricité."> c) L'électricité.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="La fumée."> d) La fumée.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(5)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme6">
+                <h3>Énigme 6 : Qu’est-ce qui a une tête, mais n’a pas de corps ?</h3>
+                <form id="enigme6Form">
+                    <label>
+                        <input type="radio" name="enigme6" value="Un robot."> a) Un robot.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="Un clou."> b) Un clou.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="Un serpent."> c) Un serpent.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="Une poupée."> d) Une poupée.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(6)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme7">
+                <h3>Énigme 7 : Je suis souvent long, parfois court, mais je ne dure jamais bien longtemps. Qui suis-je ?</h3>
+                <form id="enigme7Form">
+                    <label>
+                        <input type="radio" name="enigme7" value="Un serpent."> a) Un serpent.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="Un voyage."> b) Un voyage.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="Un tuyau d’arrosage."> c) Un tuyau d’arrosage.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="Un avion."> d) Un avion.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(7)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme8">
+                <h3>Énigme 8 : Qu'est-ce qui a des mains mais ne peut pas applaudir ?</h3>
+                <form id="enigme8Form">
+                    <label>
+                        <input type="radio" name="enigme8" value="Un robot."> a) Un robot.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="Une horloge."> b) Une horloge.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="Un mannequin."> c) Un mannequin.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="Une poupée."> d) Une poupée.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(8)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme9">
+                <h3>Énigme 9 : Plus je prends de la hauteur, plus je deviens petit. Qui suis-je ?</h3>
+                <form id="enigme9Form">
+                    <label>
+                        <input type="radio" name="enigme9" value="Une montagne."> a) Une montagne.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Un ballon de baudruche."> b) Un ballon de baudruche.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Un immeuble."> c) Un immeuble.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Un arbre."> d) Un arbre.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(9)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme10">
+                <h3>Énigme 10 : Je suis un nombre entier. Si vous me divisez par 2, je deviens plus grand. Qui suis-je ?</h3>
+                <form id="enigme10Form">
+                    <label>
+                        <input type="radio" name="enigme10" value="10"> a) 10
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="100"> b) 100
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="1"> c) 1
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="0"> d) 0
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(10)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme11">
+                <h3>Énigme 11 : Qu'est-ce qui peut briser sans être touché ?</h3>
+                <form id="enigme11Form">
+                    <label>
+                        <input type="radio" name="enigme11" value="Un marteau."> a) Un marteau.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Un silence."> b) Un silence.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Une vitre."> c) Une vitre.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Un cœur."> d) Un cœur.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(11)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme12">
+                <h3>Énigme 12 : Qu’est-ce qui a un cœur qui ne bat jamais ?</h3>
+                <form id="enigme12Form">
+                    <label>
+                        <input type="radio" name="enigme12" value="Un robot."> a) Un robot.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="Un artichaut."> b) Un artichaut.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="Une pomme."> c) Une pomme.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="Un clou."> d) Un clou.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(12)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme13">
+                <h3>Énigme 13 : Je peux être brisé sans être touché. Qui suis-je ?</h3>
+                <form id="enigme13Form">
+                    <label>
+                        <input type="radio" name="enigme13" value="Un téléphone."> a) Un téléphone.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="Un miroir."> b) Un miroir.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="Un cœur."> c) Un cœur.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="Une promesse."> d) Une promesse.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(13)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme14">
+                <h3>Énigme 14 : Qu’est-ce qui a une tête, mais qui ne pense jamais ?</h3>
+                <form id="enigme14Form">
+                    <label>
+                        <input type="radio" name="enigme14" value="Un clou."> a) Un clou.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="Une poupée."> b) Une poupée.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="Un robot."> c) Un robot.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="Un ordinateur."> d) Un ordinateur.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(14)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme15">
+                <h3>Énigme 15 : Quel est l’animal qui porte sa maison sur son dos ?</h3>
+                <form id="enigme15Form">
+                    <label>
+                        <input type="radio" name="enigme15" value="Un ours."> a) Un ours.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Un escargot."> b) Un escargot.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Une tortue."> c) Une tortue.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Un hérisson."> d) Un hérisson.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(15)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme16">
+                <h3>Énigme 16 : Qu'est-ce qui appartient à vous, mais que les autres utilisent plus que vous ?</h3>
+                <form id="enigme16Form">
+                    <label>
+                        <input type="radio" name="enigme16" value="Vos chaussettes."> a) Vos chaussettes.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Votre téléphone."> b) Votre téléphone.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Votre nom."> c) Votre nom.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Votre manteau."> d) Votre manteau.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(16)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme17">
+                <h3>Énigme 17 : Je suis une question, mais je n’ai pas de réponse. Qui suis-je ?</h3>
+                <form id="enigme17Form">
+                    <label>
+                        <input type="radio" name="enigme17" value="Une enquête."> a) Une enquête.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="Une énigme."> b) Une énigme.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="Un quiz."> c) Un quiz.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="Une interrogation."> d) Une interrogation.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(17)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme18">
+                <h3>Énigme 18 : Qu'est-ce qui monte mais ne redescend jamais ?</h3>
+                <form id="enigme18Form">
+                    <label>
+                        <input type="radio" name="enigme18" value="Un ballon."> a) Un ballon.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="Un avion."> b) Un avion.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="Le temps."> c) L'âge.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="Une étoile."> d) Une étoile.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(18)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme19">
+                <h3>Énigme 19 : Qu’est-ce qui est aussi lourd que le plus lourd des poids, mais qui peut être soulevé facilement ?</h3>
+                <form id="enigme19Form">
+                    <label>
+                        <input type="radio" name="enigme19" value="Une montagne."> a) Une montagne.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Un rêve."> b) Un rêve.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Une responsabilite."> c) Une responsabilite.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Un ballon."> d) Un ballon.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(19)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme20">
+                <h3>Énigme 20 : Qu'est-ce qui a beaucoup de dents mais ne mord jamais ?</h3>
+                <form id="enigme20Form">
+                    <label>
+                        <input type="radio" name="enigme20" value="Un lion."> a) Un lion.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="Une scie."> b) Une scie.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="Un serpent."> c) Un serpent.
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="Un requin."> d) Un requin.
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(20)">Suivant</button>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Le Labyrinthe des Idées. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        let score = 0;  // Variable pour suivre le score
+        
+        const bonnesReponses = {
+    'enigme1': 'L\'obscurité.',         // Plus je suis grand, moins on me voit. Qui suis-je ? Réponse : L'obscurité.
+    'enigme2': 'Un rêve.',              // Je suis pris avant de vous coucher, mais je ne vous réveille jamais. Qui suis-je ? Réponse : Un rêve.
+    'enigme3': 'Le souffle.',           // Qu'est-ce qui est plus léger qu'une plume, mais même le plus fort des hommes ne peut le tenir longtemps ? Réponse : Le souffle.
+    'enigme4': 'Temps.',                // Quel est le mot de quatre lettres qui peut être aussi bien un plaisir qu’une contrainte ? Réponse : Temps.
+    'enigme5': 'L\'air.',               // Je suis partout, mais je ne suis jamais vu. Je peux vous guider, mais vous ne pouvez pas me toucher. Qui suis-je ? Réponse : L'air.
+    'enigme6': 'Un clou.',              // Qu’est-ce qui a une tête, mais n’a pas de corps ? Réponse : Un clou.
+    'enigme7': 'Un voyage.',            // Je suis souvent long, parfois court, mais je ne dure jamais bien longtemps. Qui suis-je ? Réponse : Un voyage.
+    'enigme8': 'Une horloge.',          // Qu'est-ce qui a des mains mais ne peut pas applaudir ? Réponse : Une horloge.
+    'enigme9': 'Un ballon de baudruche.', // Plus je prends de la hauteur, plus je deviens petit. Qui suis-je ? Réponse : Un ballon de baudruche.
+    'enigme10': '0',                   // Je suis un nombre entier. Si vous me divisez par 2, je deviens plus grand. Qui suis-je ? Réponse : 0.
+    'enigme11': 'Un silence.',          // Qu'est-ce qui peut briser sans être touché ? Réponse : Un silence.
+    'enigme12': 'Un artichaut.',        // Qu’est-ce qui a un cœur qui ne bat jamais ? Réponse : Un artichaut.
+    'enigme13': 'Une promesse.',        // Je peux être brisé sans être touché. Qui suis-je ? Réponse : Une promesse.
+    'enigme14': 'Un clou.',             // Qu’est-ce qui a une tête, mais qui ne pense jamais ? Réponse : Un clou.
+    'enigme15': 'Un escargot.',         // Quel est l’animal qui porte sa maison sur son dos ? Réponse : L'escargot.
+    'enigme16': 'Votre nom.',           // Qu'est-ce qui appartient à vous, mais que les autres utilisent plus que vous ? Réponse : Votre nom.
+    'enigme17': 'Une énigme.',          // Je suis une question, mais je n’ai pas de réponse. Qui suis-je ? Réponse : Une énigme.
+    'enigme18': 'L\'âge.',              // Qu'est-ce qui monte mais ne redescend jamais ? Réponse : L'âge.
+    'enigme19': 'Une responsabilite.',                
+    'enigme20': 'Une scie.'           // Qu'est-ce qui est plein de trous mais qui peut encore contenir de l'eau ? Réponse : Une éponge.
+};
+function verifierReponse(enigmeId) {
+    const selectedAnswer = document.querySelector(`input[name="enigme${enigmeId}"]:checked`);
+    if (!selectedAnswer) {
+        alert("Vous n'avez pas sélectionner une réponse.");
+        return;
+    }
+
+    const reponseUtilisateur = selectedAnswer.value;
+    const bonneReponse = bonnesReponses[`enigme${enigmeId}`];
+
+    if (reponseUtilisateur === bonneReponse) {
+        score++;
+    } else {
+        alert("Mauvaise réponse.");
+    }
+
+    document.getElementById('score').textContent = `Score: ${score}`;
+}
+
+function nextQuestion(enigmeId) {
+    verifierReponse(enigmeId);
+
+    // Hide current question
+    const currentEnigme = document.getElementById(`enigme${enigmeId}`);
+    currentEnigme.style.display = 'none';
+
+    // Show next question
+    const nextEnigme = document.getElementById(`enigme${enigmeId + 1}`);
+    if (nextEnigme) {
+        nextEnigme.style.display = 'block';
+    }
+}
+
+let timeLeft = 1800; // Timer in seconds (30 minutes)
+let timerInterval;
+
+function startTimer() {
+    timerInterval = setInterval(function() {
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            alert('Le temps est écoulé!');
+            document.getElementById('score').textContent = `Votre score final est : ${score}`;
+            document.getElementById('questions-container').style.display = 'none';
+        } else {
+            timeLeft--;
+            updateTimerDisplay(timeLeft);
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    document.getElementById('timer').textContent = `${padTime(minutes)}:${padTime(remainingSeconds)}`;
+}
+
+function padTime(time) {
+    return time < 10 ? `0${time}` : time;
+}
+
+window.onload = function() {
+    startTimer(); // Start the timer when the page loads
+
+    // Initialize score display
+    document.getElementById('score').textContent = `Score: ${score}`;
+
+    // Show the first question
+    document.getElementById('enigme1').style.display = 'block';
+};
+</script>
+          <script src="script.js"></script>
+    </body>
+    </html>

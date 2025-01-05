@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Énigmes Mathématiques</title>
+    <link rel="icon" href="photo/math.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Bienvenue sur Le Labyrinthe des Idées</h1>
+        <p>Résolvez, partagez et testez vos capacités !</p>
+        <div class="menu-container">
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="ACCEUIL.html">Acceuil</a>
+                <a href="ACCEUIL.html">À propos de nous</a>
+                <a href="ACCEUIL.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>
+
+    <!-- Section des énigmes -->
+    <section id="enigmes">
+        <div id="score-container">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+        <div id="timer-container">
+            <p>Temps restant : <span id="timer">00:00</span></p>
+        </div>
+        <div id="questions-container">
+            <!-- Énigme 1 -->
+<div class="enigme" id="enigme1">
+    <h3>Énigme 1 : Quel est le plus grand commun diviseur (PGCD) de 36 et 24 ?</h3>
+    <form id="enigme1Form">
+        <label>
+            <input type="radio" name="enigme1" value="12"> a) 12
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme1" value="6"> b) 6
+        </label><br>
+        <label>
+            <input type="radio" name="enigme1" value="18"> c) 18
+        </label><br>
+        <label>
+            <input type="radio" name="enigme1" value="24"> d) 24
+        </label><br>
+        <button type="button" onclick="nextQuestion(1)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme2">
+    <h3>Énigme 2 : Calcule : 12 − 3 × 2 + 4.</h3>
+    <form id="enigme2Form">
+        <label>
+            <input type="radio" name="enigme2" value="14"> a) 14
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme2" value="16"> b) 16
+        </label><br>
+        <label>
+            <input type="radio" name="enigme2" value="12"> c) 12
+        </label><br>
+        <label>
+            <input type="radio" name="enigme2" value="10"> d) 10
+        </label><br>
+        <button type="button" onclick="nextQuestion(2)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme3">
+    <h3>Énigme 3 : Si un triangle a des côtés de 6 cm, 8 cm, et 10 cm, est-il rectangle ?</h3>
+    <form id="enigme3Form">
+        <label>
+            <input type="radio" name="enigme3" value="oui"> a) Oui
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme3" value="non"> b) Non
+        </label><br>
+        <button type="button" onclick="nextQuestion(3)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme4">
+    <h3>Énigme 4 : Résous pour x : x² = 49.</h3>
+    <form id="enigme4Form">
+        <label>
+            <input type="radio" name="enigme4" value="7"> a) x = 7
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme4" value="-7"> b) x = -7
+        </label><br>
+        <label>
+            <input type="radio" name="enigme4" value="7 et -7"> c) x = 7 et -7
+        </label><br>
+        <label>
+            <input type="radio" name="enigme4" value="0"> d) x = 0
+        </label><br>
+        <button type="button" onclick="nextQuestion(4)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme5">
+    <h3>Énigme 5 : Trouve la somme des angles dans un pentagone.</h3>
+    <form id="enigme5Form">
+        <label>
+            <input type="radio" name="enigme5" value="360"> a) 360°
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme5" value="540"> b) 540°
+        </label><br>
+        <label>
+            <input type="radio" name="enigme5" value="720"> c) 720°
+        </label><br>
+        <label>
+            <input type="radio" name="enigme5" value="180"> d) 180°
+        </label><br>
+        <button type="button" onclick="nextQuestion(5)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme6">
+    <h3>Énigme 6 : Si 3a + 2 = 11, quelle est la valeur de a ?</h3>
+    <form id="enigme6Form">
+        <label>
+            <input type="radio" name="enigme6" value="3"> a) 3
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme6" value="5"> b) 5
+        </label><br>
+        <label>
+            <input type="radio" name="enigme6" value="2"> c) 2
+        </label><br>
+        <label>
+            <input type="radio" name="enigme6" value="4"> d) 4
+        </label><br>
+        <button type="button" onclick="nextQuestion(6)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme7">
+    <h3>Énigme 7 : Convertis 45°C en Kelvin.</h3>
+    <form id="enigme7Form">
+        <label>
+            <input type="radio" name="enigme7" value="318.15"> a) 318.15 K
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme7" value="273.15"> b) 273.15 K
+        </label><br>
+        <label>
+            <input type="radio" name="enigme7" value="400"> c) 400 K
+        </label><br>
+        <label>
+            <input type="radio" name="enigme7" value="315"> d) 315 K
+        </label><br>
+        <button type="button" onclick="nextQuestion(7)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme8">
+    <h3>Énigme 8 : Quelle est la moyenne de 8, 12, 15, et 25 ?</h3>
+    <form id="enigme8Form">
+        <label>
+            <input type="radio" name="enigme8" value="15"> a) 15
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme8" value="20"> b) 20
+        </label><br>
+        <label>
+            <input type="radio" name="enigme8" value="25"> c) 25
+        </label><br>
+        <label>
+            <input type="radio" name="enigme8" value="22.5"> d) 22.5
+        </label><br>
+        <button type="button" onclick="nextQuestion(8)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme9">
+    <h3>Énigme 9 : Trouve le volume d’un cube de côté 5 cm.</h3>
+    <form id="enigme9Form">
+        <label>
+            <input type="radio" name="enigme9" value="125"> a) 125 cm³
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme9" value="50"> b) 50 cm³
+        </label><br>
+        <label>
+            <input type="radio" name="enigme9" value="100"> c) 100 cm³
+        </label><br>
+        <label>
+            <input type="radio" name="enigme9" value="75"> d) 75 cm³
+        </label><br>
+        <button type="button" onclick="nextQuestion(9)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme10">
+    <h3>Énigme 10 : Calcule 10% de 250.</h3>
+    <form id="enigme10Form">
+        <label>
+            <input type="radio" name="enigme10" value="25"> a) 25
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme10" value="50"> b) 50
+        </label><br>
+        <label>
+            <input type="radio" name="enigme10" value="100"> c) 100
+        </label><br>
+        <label>
+            <input type="radio" name="enigme10" value="10"> d) 10
+        </label><br>
+        <button type="button" onclick="nextQuestion(10)">Suivant</button>
+    </form>
+</div>
+<div class="enigme" id="enigme11">
+    <h3>Énigme 11 : Résous pour x : 4x + 12 = 28.</h3>
+    <form id="enigme11Form">
+        <label>
+            <input type="radio" name="enigme11" value="4"> a) x = 4
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme11" value="3"> b) x = 3
+        </label><br>
+        <label>
+            <input type="radio" name="enigme11" value="5"> c) x = 5
+        </label><br>
+        <label>
+            <input type="radio" name="enigme11" value="2"> d) x = 2
+        </label><br>
+        <button type="button" onclick="nextQuestion(11)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme12">
+    <h3>Énigme 12 : Si un cercle a un rayon de 7 cm, trouve son aire (utilise π = 3.14).</h3>
+    <form id="enigme12Form">
+        <label>
+            <input type="radio" name="enigme12" value="153.86"> a) 153.86 cm²
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme12" value="100"> b) 100 cm²
+        </label><br>
+        <label>
+            <input type="radio" name="enigme12" value="120"> c) 120 cm²
+        </label><br>
+        <label>
+            <input type="radio" name="enigme12" value="180"> d) 180 cm²
+        </label><br>
+        <button type="button" onclick="nextQuestion(12)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme13">
+    <h3>Énigme 13 : Écris 0,75 sous forme de fraction simplifiée.</h3>
+    <form id="enigme13Form">
+        <label>
+            <input type="radio" name="enigme13" value="3/4"> a) 3/4
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme13" value="1/4"> b) 1/4
+        </label><br>
+        <label>
+            <input type="radio" name="enigme13" value="2/3"> c) 2/3
+        </label><br>
+        <label>
+            <input type="radio" name="enigme13" value="5/6"> d) 5/6
+        </label><br>
+        <button type="button" onclick="nextQuestion(13)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme14">
+    <h3>Énigme 14 : Résous 2x² − 5x + 3 = 0.</h3>
+    <form id="enigme14Form">
+        <label>
+            <input type="radio" name="enigme14" value="x1=1, x2=3"> a) x1 = 1, x2 = 3
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme14" value="x1=-1, x2=-3"> b) x1 = -1, x2 = -3
+        </label><br>
+        <label>
+            <input type="radio" name="enigme14" value="x1=2, x2=5"> c) x1 = 2, x2 = 5
+        </label><br>
+        <label>
+            <input type="radio" name="enigme14" value="x1=-2, x2=5"> d) x1 = -2, x2 = 5
+        </label><br>
+        <button type="button" onclick="nextQuestion(14)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme15">
+    <h3>Énigme 15 : Simplifie : x² − 4 − 2x.</h3>
+    <form id="enigme15Form">
+        <label>
+            <input type="radio" name="enigme15" value="x² − 2x − 4"> a) x² − 2x − 4
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme15" value="x² − 6x − 4"> b) x² − 6x − 4
+        </label><br>
+        <label>
+            <input type="radio" name="enigme15" value="x² + 4 − 2x"> c) x² + 4 − 2x
+        </label><br>
+        <label>
+            <input type="radio" name="enigme15" value="x² − 4x − 2"> d) x² − 4x − 2
+        </label><br>
+        <button type="button" onclick="nextQuestion(15)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme16">
+    <h3>Énigme 16 : Calcule l'intégrale ∫(3x² − 2x + 1) dx.</h3>
+    <form id="enigme16Form">
+        <label>
+            <input type="radio" name="enigme16" value="x³ − x² + x + C"> a) x³ − x² + x + C
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme16" value="x³ − 2x² + x + C"> b) x³ − 2x² + x + C
+        </label><br>
+        <label>
+            <input type="radio" name="enigme16" value="3x³ − x² + x + C"> c) 3x³ − x² + x + C
+        </label><br>
+        <label>
+            <input type="radio" name="enigme16" value="3x³ − x² + x − C"> d) 3x³ − x² + x − C
+        </label><br>
+        <button type="button" onclick="nextQuestion(16)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme17">
+    <h3>Énigme 17 : Si A = {1, 2, 3, 4, 5}, combien de sous-ensembles possède A ?</h3>
+    <form id="enigme17Form">
+        <label>
+            <input type="radio" name="enigme17" value="32"> a) 32
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme17" value="64"> b) 64
+        </label><br>
+        <label>
+            <input type="radio" name="enigme17" value="16"> c) 16
+        </label><br>
+        <label>
+            <input type="radio" name="enigme17" value="8"> d) 8
+        </label><br>
+        <button type="button" onclick="nextQuestion(17)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme18">
+    <h3>Énigme 18 : Résous l'inéquation 3x + 2 > 5x − 7.</h3>
+    <form id="enigme18Form">
+        <label>
+            <input type="radio" name="enigme18" value="x < 5"> a) x < 5
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme18" value="x > 5"> b) x > 5
+        </label><br>
+        <label>
+            <input type="radio" name="enigme18" value="x ≤ 5"> c) x ≤ 5
+        </label><br>
+        <label>
+            <input type="radio" name="enigme18" value="x ≥ 5"> d) x ≥ 5
+        </label><br>
+        <button type="button" onclick="nextQuestion(18)">Suivant</button>
+    </form>
+</div>
+
+<div class="enigme" id="enigme19">
+    <h3>Énigme 19 : Trouve la dérivée de f(x) = x³ − 4x² + x − 6.</h3>
+    <form id="enigme19Form">
+        <label>
+            <input type="radio" name="enigme19" value="3x² − 8x + 1"> a) 3x² − 8x + 1
+        </label><br>
+
+        <label>
+            <input type="radio" name="enigme19" value="3x² − 8x − 6"> b) 3x² − 8x − 6
+        </label><br>
+        <label>
+            <input type="radio" name="enigme19" value="3x² − 6x + 1"> c) 3x² − 6x + 1
+        </label><br>
+        <label>
+            <input type="radio" name="enigme19" value="3x² − 4x + 1"> d) 3x² − 4x + 1
+        </label><br>
+        <button type="button" onclick="nextQuestion(19)">Suivant</button>
+    </form>
+</div>
+      
+</div>
+</section>
+
+<footer>
+    <p>© 2024 Le Labyrinthe des Idées. Tous droits réservés.</p>
+</footer>
+
+<script>
+    let score = 0;  // Variable pour suivre le score
+    
+    const bonnesReponses = {
+    'enigme1': '1 ou 3/2',
+    'enigme2': '(x + 2) / x',
+    'enigme3': 'x^3 - x^2 + x + C',
+    'enigme4': '32',
+    'enigme5': 'x < 4.5',
+    'enigme6': '3x^2 - 8x + 1',
+    'enigme7': '5 / 2',
+    'enigme8': '3/2',
+    'enigme9': '6',
+    'enigme10': 'x = 2, y = 1, z = 3',
+    'enigme11': '3x',
+    'enigme12': '9',
+    'enigme13': 'π/6 ou 5π/6',
+    'enigme14': '7',
+    'enigme15': '56',
+    'enigme16': '10',
+    'enigme17': '385',
+    'enigme18': '(x + 7) / 3',
+    'enigme19': '4x^2 cos(x^2) - 2 sin(x^2)',
+    'enigme20': '3 et 1'
+};
+
+    
+    function verifierReponse(enigmeId) {
+const selectedAnswer = document.querySelector(`input[name="enigme${enigmeId}"]:checked`);
+if (!selectedAnswer) {
+    alert("Vous n'avez pas sélectionner une réponse.");
+    return;
+}
+
+const reponseUtilisateur = selectedAnswer.value;
+const bonneReponse = bonnesReponses[`enigme${enigmeId}`];
+
+if (reponseUtilisateur === bonneReponse) {
+    score++;
+} else {
+    alert("Mauvaise réponse.");
+}
+
+document.getElementById('score').textContent = `Score: ${score}`;
+}
+
+function nextQuestion(enigmeId) {
+verifierReponse(enigmeId);
+
+// Hide current question
+const currentEnigme = document.getElementById(`enigme${enigmeId}`);
+currentEnigme.style.display = 'none';
+
+// Show next question
+const nextEnigme = document.getElementById(`enigme${enigmeId + 1}`);
+if (nextEnigme) {
+    nextEnigme.style.display = 'block';
+}
+}
+
+let timeLeft = 3600; // Timer in seconds (30 minutes)
+let timerInterval;
+
+function startTimer() {
+timerInterval = setInterval(function() {
+    if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        alert('Le temps est écoulé!');
+        document.getElementById('score').textContent = `Votre score final est : ${score}`;
+        document.getElementById('questions-container').style.display = 'none';
+    } else {
+        timeLeft--;
+        updateTimerDisplay(timeLeft);
+    }
+}, 1000);
+}
+
+function updateTimerDisplay(seconds) {
+const minutes = Math.floor(seconds / 60);
+const remainingSeconds = seconds % 60;
+document.getElementById('timer').textContent = `${padTime(minutes)}:${padTime(remainingSeconds)}`;
+}
+
+function padTime(time) {
+return time < 10 ? `0${time}` : time;
+}
+
+window.onload = function() {
+startTimer(); // Start the timer when the page loads
+
+// Initialize score display
+document.getElementById('score').textContent = ` ${score}`;
+
+// Show the first question
+document.getElementById('enigme1').style.display = 'block';
+};
+</script>
+      <script src="script.js"></script>
+</body>
+</html>

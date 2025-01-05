@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Énigmes Psychologiques</title>
+    <link rel="icon" href="photo/psychology.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Bienvenue sur Le Labyrinthe des Idées</h1>
+        <p>Résolvez, partagez et testez vos capacités !</p>
+        <div class="menu-container">
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="ACCEUIL.html">Acceuil</a>
+                <a href="ACCEUIL.html">À propos de nous</a>
+                <a href="ACCEUIL.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section des énigmes -->
+    <section id="enigmes">
+        <div id="score-container">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+        <div id="timer-container">
+            <p>Temps restant : <span id="timer">00:00</span></p>
+        </div>
+        <div id="questions-container">
+            <div class="enigme" id="enigme1">
+                <h3>Énigme 1 : Je suis une émotion qui peut être déclenchée par une perte ou une déception. Que suis-je ?</h3>
+                <form id="enigme1Form">
+                    <label>
+                        <input type="radio" name="enigme1" value="La tristesse"> a) La tristesse
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="La colère"> b) La colère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="L'anxiété"> c) L'anxiété
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme1" value="Le bonheur"> d) Le bonheur
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(1)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme2">
+                <h3>Énigme 2 : Je suis un état de calme et de satisfaction, souvent recherché par tous. Que suis-je ?</h3>
+                <form id="enigme2Form">
+                    <label>
+                        <input type="radio" name="enigme2" value="La peur"> a) La peur
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="La paix intérieure"> b) La paix intérieure
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="L'amour"> c) L'amour
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme2" value="La jalousie"> d) La jalousie
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(2)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme3">
+                <h3>Énigme 3 : Je suis une peur intense et irrationnelle d’un objet ou d’une situation. Qui suis-je ?</h3>
+                <form id="enigme3Form">
+                    <label>
+                        <input type="radio" name="enigme3" value="Une phobie"> a) Une phobie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="Le déni"> b) Le déni
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="La paix"> c) La paix
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme3" value="La tristesse"> d) La tristesse
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(3)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme4">
+                <h3>Énigme 4 : Je suis un mécanisme inconscient qui protège l’esprit contre des pensées ou souvenirs désagréables. Que suis-je ?</h3>
+                <form id="enigme4Form">
+                    <label>
+                        <input type="radio" name="enigme4" value="L'empathie"> a) L'empathie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="Le déni"> b) Le déni
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="La colère"> c) La colère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme4" value="La tristesse"> d) La tristesse
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(4)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme5">
+                <h3>Énigme 5 : Je suis une qualité qui consiste à ressentir les émotions des autres comme si elles étaient les miennes. Qui suis-je ?</h3>
+                <form id="enigme5Form">
+                    <label>
+                        <input type="radio" name="enigme5" value="empathie"> a) L'empathie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="Le pessimisme"> b) Le pessimisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="La jalousie"> c) La jalousie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme5" value="La fierté"> d) La fierté
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(5)">Suivant</button>
+                </form>
+            </div>
+            <div class="enigme" id="enigme6">
+                <h3>Énigme 6 : Je suis une réaction instinctive face à un danger immédiat, souvent accompagnée de stress. Que suis-je ?</h3>
+                <form id="enigme6Form">
+                    <label>
+                        <input type="radio" name="enigme6" value="La peur"> a) La peur
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="La colère"> b) La colère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="L'anxiété"> c) L'anxiété
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme6" value="La tristesse"> d) La tristesse
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(6)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme7">
+                <h3>Énigme 7 : Je suis un besoin fondamental selon Maslow, nécessaire après les besoins physiologiques. Que suis-je ?</h3>
+                <form id="enigme7Form">
+                    <label>
+                        <input type="radio" name="enigme7" value="Le besoin de sécurité"> a) Le besoin de sécurité
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="Le besoin d'amour"> b) Le besoin d'amour
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="Le besoin d'estime"> c) Le besoin d'estime
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme7" value="Le besoin de reconnaissance"> d) Le besoin de reconnaissance
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(7)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme8">
+                <h3>Énigme 8 : Je suis une impression que tout s’écroule, souvent ressentie après un échec important. Que suis-je ?</h3>
+                <form id="enigme8Form">
+                    <label>
+                        <input type="radio" name="enigme8" value="Le désespoir"> a) Le désespoir
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="L'espoir"> b) L'espoir
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="La tristesse"> c) La tristesse
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme8" value="La colère"> d) La colère
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(8)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme9">
+                <h3>Énigme 9 : Je suis une façon de penser optimiste et tournée vers l’avenir. Que suis-je ?</h3>
+                <form id="enigme9Form">
+                    <label>
+                        <input type="radio" name="enigme9" value="espoir"> a) L'espoir
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="Le pessimisme"> b) Le pessimisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="La peur"> c) La peur
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme9" value="La tristesse"> d) La tristesse
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(9)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme10">
+                <h3>Énigme 10 : Je suis un état dans lequel une personne ne sait plus distinguer le réel de l’imaginaire. Que suis-je ?</h3>
+                <form id="enigme10Form">
+                    <label>
+                        <input type="radio" name="enigme10" value="Une psychose"> a) Une psychose
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="La dépression"> b) La dépression
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="L'anxiété"> c) L'anxiété
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme10" value="L'espoir"> d) L'espoir
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(10)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme11">
+                <h3>Énigme 11 : Je suis le processus par lequel une personne apprend à s’adapter à son environnement. Que suis-je ?</h3>
+                <form id="enigme11Form">
+                    <label>
+                        <input type="radio" name="enigme11" value="apprentissage"> a) L'apprentissage
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Le mimétisme"> b) Le mimétisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="Le déni"> c) Le déni
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme11" value="L'empathie"> d) L'empathie
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(11)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme12">
+                <h3>Énigme 12 : Je suis un état d’esprit dans lequel une personne s’inquiète excessivement pour des choses insignifiantes. Que suis-je ?</h3>
+                <form id="enigme12Form">
+                    <label>
+                        <input type="radio" name="enigme12" value="anxiété"> a) L'anxiété
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="La peur"> b) La peur
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="La fierté"> c) La fierté
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme12" value="La dépression"> d) La dépression
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(12)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme13">
+                <h3>Énigme 13 : Je suis un sentiment qui survient lorsqu’une personne se compare aux autres et se sent inférieure. Que suis-je ?</h3>
+                <form id="enigme13Form">
+                    <label>
+                        <input type="radio" name="enigme13" value="La jalousie"> a) La jalousie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="La fierté"> b) La fierté
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="L'empathie"> c) L'empathie
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme13" value="L'amour"> d) L'amour
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(13)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme14">
+                <h3>Énigme 14 : Je suis une expérience où une personne revoit ou imagine son passé avec nostalgie ou regret. Que suis-je ?</h3>
+                <form id="enigme14Form">
+                    <label>
+                        <input type="radio" name="enigme14" value="La remémoration"> a) La remémoration
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="Le pessimisme"> b) Le pessimisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="La tristesse"> c) La tristesse
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme14" value="L'espoir"> d) L'espoir
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(14)">Suivant</button>
+                </form>
+            </div>
+            <div class="enigme" id="enigme15">
+                <h3>Énigme 15 : Je suis un comportement par lequel une personne imite les actions ou pensées des autres. Que suis-je ?</h3>
+                <form id="enigme15Form">
+                    <label>
+                        <input type="radio" name="enigme15" value="Le mimétisme"> a) Le mimétisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="La fierté"> b) La fierté
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="L'isolement émotionnel"> c) L'isolement émotionnel
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme15" value="Le pessimisme"> d) Le pessimisme
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(15)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme16">
+                <h3>Énigme 16 : Je suis une sensation de satisfaction après avoir accompli quelque chose d'important. Que suis-je ?</h3>
+                <form id="enigme16Form">
+                    <label>
+                        <input type="radio" name="enigme16" value="Le mimétisme"> a) Le mimétisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="La fierté"> b) La fierté
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="Le pessimisme"> c) Le pessimisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme16" value="L'isolement émotionnel"> d) L'isolement émotionnel
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(16)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme17">
+                <h3>Énigme 17 : Je suis une habitude mentale où une personne voit tout sous un angle négatif. Que suis-je ?</h3>
+                <form id="enigme17Form">
+                    <label>
+                        <input type="radio" name="enigme17" value="Le mimétisme"> a) Le mimétisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="Le pessimisme"> b) Le pessimisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="La fierté"> c) La fierté
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme17" value="L'isolement émotionnel"> d) L'isolement émotionnel
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(17)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme18">
+                <h3>Énigme 18 : Je suis un sentiment de solitude, même lorsqu’on est entouré de monde. Que suis-je ?</h3>
+                <form id="enigme18Form">
+                    <label>
+                        <input type="radio" name="enigme18" value="isolement émotionnel"> a) L'isolement émotionnel
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="Le mimétisme"> b) Le mimétisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="La fierté"> c) La fierté
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme18" value="Le pessimisme"> d) Le pessimisme
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(18)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme19">
+                <h3>Énigme 19 : Je suis une réaction naturelle à une situation injuste ou blessante. Que suis-je ?</h3>
+                <form id="enigme19Form">
+                    <label>
+                        <input type="radio" name="enigme19" value="La colère"> a) La colère
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Le mimétisme"> b) Le mimétisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="Le pessimisme"> c) Le pessimisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme19" value="L'isolement émotionnel"> d) L'isolement émotionnel
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(19)">Suivant</button>
+                </form>
+            </div>
+            
+            <div class="enigme" id="enigme20">
+                <h3>Énigme 20 : Je suis l’ensemble des traits, comportements et attitudes qui définissent une personne unique. Que suis-je ?</h3>
+                <form id="enigme20Form">
+                    <label>
+                        <input type="radio" name="enigme20" value="La personnalité"> a) La personnalité
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="Le mimétisme"> b) Le mimétisme
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="La fierté"> c) La fierté
+                    </label><br>
+                    <label>
+                        <input type="radio" name="enigme20" value="Le pessimisme"> d) Le pessimisme
+                    </label><br>
+                    <button type="button" onclick="nextQuestion(20)">Suivant</button>
+                </form>
+            </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Le Labyrinthe des Idées. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+      let score = 0;  // Variable pour suivre le score
+      
+
+
+const bonnesReponses = {
+    'enigme1': 'La tristesse',
+    'enigme2': 'La paix intérieure',
+    'enigme3': 'Une phobie',
+    'enigme4': 'Le déni',
+    'enigme5': 'L’empathie',
+    'enigme6': 'La peur',
+    'enigme7': 'Le besoin de sécurité',
+    'enigme8': 'Le désespoir',
+    'enigme9': 'L’espoir',
+    'enigme10': 'Une psychose',
+    'enigme11': 'L’apprentissage',
+    'enigme12': 'L’anxiété',
+    'enigme13': 'La jalousie',
+    'enigme14': 'La remémoration',
+    'enigme15': 'Le mimétisme',
+    'enigme16': 'La fierté',
+    'enigme17': 'Le pessimisme',
+    'enigme18': 'L’isolement émotionnel',
+    'enigme19': 'La colère',
+    'enigme20': 'La personnalité',
+};
+
+function verifierReponse(enigmeId) {
+    const selectedAnswer = document.querySelector(`input[name="enigme${enigmeId}"]:checked`);
+    if (!selectedAnswer) {
+        alert("Vous n'avez pas sélectionner une réponse.");
+        return;
+    }
+
+    const reponseUtilisateur = selectedAnswer.value;
+    const bonneReponse = bonnesReponses[`enigme${enigmeId}`];
+
+    if (reponseUtilisateur === bonneReponse) {
+        score++;
+    } else {
+        alert("Mauvaise réponse.");
+    }
+
+    document.getElementById('score').textContent = `Score: ${score}`;
+}
+
+function nextQuestion(enigmeId) {
+    verifierReponse(enigmeId);
+
+    // Hide current question
+    const currentEnigme = document.getElementById(`enigme${enigmeId}`);
+    currentEnigme.style.display = 'none';
+
+    // Show next question
+    const nextEnigme = document.getElementById(`enigme${enigmeId + 1}`);
+    if (nextEnigme) {
+        nextEnigme.style.display = 'block';
+    }
+}
+
+let timeLeft = 1800; // Timer in seconds (30 minutes)
+let timerInterval;
+
+function startTimer() {
+    timerInterval = setInterval(function() {
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            alert('Le temps est écoulé!');
+            document.getElementById('score').textContent = `Votre score final est : ${score}`;
+            document.getElementById('questions-container').style.display = 'none';
+        } else {
+            timeLeft--;
+            updateTimerDisplay(timeLeft);
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    document.getElementById('timer').textContent = `${padTime(minutes)}:${padTime(remainingSeconds)}`;
+}
+
+function padTime(time) {
+    return time < 10 ? `0${time}` : time;
+}
+
+window.onload = function() {
+    startTimer(); // Start the timer when the page loads
+
+    // Initialize score display
+    document.getElementById('score').textContent = `Score: ${score}`;
+
+    // Show the first question
+    document.getElementById('enigme1').style.display = 'block';
+};
+</script>
+          <script src="script.js"></script>
+    </body>
+    </html>

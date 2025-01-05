@@ -1,0 +1,195 @@
+/* styles.css */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background: #1e3c72;
+    padding: 2rem 0;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-family: 'Georgia', serif; /* Une police élégante */
+    font-size: 2rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: #ffce00; /* Couleur vive qui attire l’attention */
+    text-align: center; /* Centre le titre */
+    text-transform: uppercase; /* Met tout en majuscule */
+    letter-spacing: 3px; /* Espacement entre les lettres */
+    margin: 20px 0; /* Espace autour du titre */
+    padding: 10px 20px; /* Espace intérieur pour un meilleur focus */
+    background: linear-gradient(90deg, #274988, #4e4cd3); /* Dégradé de fond */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    display: inline-block; /* Ajuste la largeur au texte */
+}
+#score-container, #timer-container{
+    font-family: 'Georgia', serif; /* Une police élégante */
+    font-size: 1rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: #ffce00; /* Couleur vive qui attire l’attention */
+    text-align: center; /* Centre le titre */
+    text-transform: uppercase; /* Met tout en majuscule */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    margin: 10px 0; /* Espace autour du titre */
+    padding: 10px 2%; /* Espace intérieur pour un meilleur focus */
+    background: linear-gradient(90deg, #274988, #4e4cd3); /* Dégradé de fond */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    display: inline-block; /* Ajuste la largeur au texte */
+}
+
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+/* Navbar */
+.menu-container {
+    margin-top: 1rem;
+}
+
+.hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffce00;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+/* Section des énigmes */
+#enigmes {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#score-container {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffce00;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.enigme {
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enigme h3 {
+    color: #ffce00;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.enigme form {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.enigme label {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: #ffce00;
+    color: #1e3c72;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #d4aa00;
+}
+
+.enigme.active {
+    display: block;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #1e3c72;
+    color: #fff;
+    margin-top: 2rem;
+    border-top: 1px solid #fff;
+}
